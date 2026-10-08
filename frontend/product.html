@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:type" content="product">
+  <meta property="og:site_name" content="XN-KODASSY">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">{{{jsonld}}}</script>
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/product.js"></script>
+</head>
+<body>
+<!--@header-->
+<main id="main">
+  <script type="application/json" id="product-data">{{{productData}}}</script>
+  <div class="container">
+    <ol class="breadcrumb breadcrumb--light" style="padding-top:18px" data-crumbs><li><a href="/">Accueil</a></li><li><a href="/boutique">Boutique</a></li></ol>
+    <div class="pdp">
+      <div class="gallery" data-gallery>
+        <div class="gallery__main" data-gallery-main></div>
+        <div class="gallery__thumbs" data-gallery-thumbs role="list"></div>
+      </div>
+      <div class="pdp__info" data-info>
+        <div class="skel-line w-40"></div><div class="skel-line w-70 h-24"></div><div class="skel-line w-50 h-24"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section section--gray" aria-labelledby="reviews-title">
+    <div class="container" style="display:grid;gap:28px">
+      <div class="section-head" style="margin:0">
+        <div><span class="eyebrow">Avis clients</span><h2 class="section-title" id="reviews-title">Ce qu'en disent les joueurs</h2></div>
+        <div class="rating-summary" data-rating-summary hidden></div>
+      </div>
+      <div class="reviews-grid" data-reviews></div>
+      <form class="review-form" data-review-form novalidate>
+        <h3 style="font-size:26px;font-style:italic">Donner mon avis</h3>
+        <div class="form-grid form-grid--2">
+          <div class="field"><label for="rv-name">Prénom</label><input class="input" id="rv-name" name="name" required maxlength="60" autocomplete="given-name"></div>
+          <div class="field"><label for="rv-city">Ville <span class="opt">(facultatif)</span></label><input class="input" id="rv-city" name="city" maxlength="60" autocomplete="address-level2"></div>
+        </div>
+        <fieldset class="field" style="border:0;padding:0;margin:0">
+          <legend style="font:700 14px/1.2 var(--f-display);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Note</legend>
+          <div class="rating-input">
+            <input type="radio" id="rv-5" name="rating" value="5" checked><label for="rv-5" aria-label="5 étoiles"><svg><use href="#i-star"/></svg></label>
+            <input type="radio" id="rv-4" name="rating" value="4"><label for="rv-4" aria-label="4 étoiles"><svg><use href="#i-star"/></svg></label>
+            <input type="radio" id="rv-3" name="rating" value="3"><label for="rv-3" aria-label="3 étoiles"><svg><use href="#i-star"/></svg></label>
+            <input type="radio" id="rv-2" name="rating" value="2"><label for="rv-2" aria-label="2 étoiles"><svg><use href="#i-star"/></svg></label>
+            <input type="radio" id="rv-1" name="rating" value="1"><label for="rv-1" aria-label="1 étoile"><svg><use href="#i-star"/></svg></label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="rv-comment">Votre avis</label><textarea class="input" id="rv-comment" name="comment" required minlength="10" maxlength="1000" placeholder="Confort, taille, accroche…"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="rv-website">Ne pas remplir</label><input id="rv-website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap"><button class="btn" type="submit">Publier mon avis</button><p class="form-msg" role="status" style="margin:0"></p></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="similar-title">
+    <div class="container">
+      <div class="section-head"><div><span class="eyebrow">Vous aimerez aussi</span><h2 class="section-title" id="similar-title">Produits similaires</h2></div></div>
+      <div class="product-grid" data-similar aria-live="polite"></div>
+    </div>
+  </section>
+  <div class="sticky-buy" data-sticky-buy aria-hidden="true"></div>
+</main>
+<!--@footer-->
+</body>
+</html>

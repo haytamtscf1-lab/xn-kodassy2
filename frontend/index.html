@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>XN-KODASSY | Chaussures de Football — Play Hard. Look Pro.</title>
+  <meta name="description" content="Chaussures de football Adidas F50, Predator et Nike Phantom. Livraison partout au Maroc, paiement à la livraison.">
+  <link rel="canonical" href="{{siteUrl}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XN-KODASSY">
+  <meta property="og:title" content="XN-KODASSY | Chaussures de Football — Play Hard. Look Pro.">
+  <meta property="og:description" content="Chaussures de football Adidas F50, Predator et Nike Phantom. Livraison partout au Maroc, paiement à la livraison.">
+  <meta property="og:url" content="{{siteUrl}}/">
+  <meta property="og:image" content="{{siteUrl}}/images/og-cover.jpg">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" as="image" href="/images/hero-boot.webp">
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/home.js"></script>
+</head>
+<body>
+<!--@header-->
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <div class="hero__copy" style="display:grid;gap:22px">
+        <span class="hero__brand">XN-KODASSY</span>
+        <h1 id="hero-title">Play hard.<br><span class="red">Look pro.</span></h1>
+        <p class="hero__lead">Des chaussures conçues pour dominer chaque terrain.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--lg" href="/boutique">Découvrir les chaussures <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--lg btn--ghost-light" href="/boutique?promo=1">Promotions</a>
+        </div>
+        <div class="hero__stats" aria-label="XN-KODASSY en chiffres">
+          <div data-stat="products">8<small>modèles en stock</small></div>
+          <div>24–72 h<small>livraison au Maroc</small></div>
+          <div>0 DH<small>payé avant réception</small></div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__plate"></div>
+        <div class="hero__slides" id="hero-slides" aria-roledescription="carrousel" aria-label="Nos chaussures">
+          <img class="hero__slide is-active" src="/images/hero-boot.webp" alt="Chaussure de football XN-KODASSY" width="1200" height="900" fetchpriority="high">
+        </div>
+        <a class="hero__tag" id="hero-tag" href="/boutique" hidden><span>Le crampon du moment</span><b></b></a>
+        <div class="hero__dots" id="hero-dots" role="group" aria-label="Choisir une chaussure" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust" aria-label="Nos engagements">
+    <ul class="container trust__list">
+      <li><svg class="icon"><use href="#i-truck"/></svg><span><b>Livraison 24–72 h</b>Partout au Maroc</span></li>
+      <li><svg class="icon"><use href="#i-cash"/></svg><span><b>Paiement à la livraison</b>Vous payez à réception</span></li>
+      <li><svg class="icon"><use href="#i-return"/></svg><span><b>Échange 7 jours</b>Taille ou modèle</span></li>
+      <li><svg class="icon"><use href="#i-shield"/></svg><span><b>100 % authentique</b>Produits neufs garantis</span></li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="new-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Nouveautés</span><h2 class="section-title" id="new-title">Fraîchement arrivées</h2></div>
+        <a class="link-arrow" href="/boutique?sort=newest">Toutes les nouveautés <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="product-grid product-grid--scroll" data-products="new" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section section--gray" aria-labelledby="cat-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Catégories</span><h2 class="section-title" id="cat-title">Choisis ton terrain</h2></div>
+      </div>
+      <div class="cat-grid" data-categories></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="best-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Meilleures ventes</span><h2 class="section-title" id="best-title">Les plus portées</h2></div>
+        <a class="link-arrow" href="/boutique?sort=popular">Voir le classement <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="product-grid" data-products="best" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0" aria-labelledby="promo-title">
+    <div class="container" style="display:grid;gap:28px">
+      <div class="promo-banner reveal">
+        <div style="display:grid;gap:14px">
+          <span class="eyebrow" style="color:#fff">Promotions</span>
+          <h2 id="promo-title">Jusqu'à <span data-max-discount>-30</span>%</h2>
+          <p>Des modèles pros à prix cassés, dans la limite des stocks disponibles.</p>
+        </div>
+        <a class="btn btn--dark btn--lg" href="/boutique?promo=1">Voir les promos <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="product-grid" data-products="promo" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="section section--gray" aria-labelledby="brands-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Marques</span><h2 class="section-title" id="brands-title">Les meilleures marques</h2></div>
+      </div>
+      <div class="brand-row" data-brands></div>
+    </div>
+  </section>
+
+  <section class="section section--dark" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Pourquoi XN-KODASSY ?</span><h2 class="section-title" id="why-title">Pensé pour les joueurs</h2></div>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-item"><svg><use href="#i-shield"/></svg><h3>Authenticité garantie</h3><p>Uniquement des paires neuves, en boîte d'origine, issues de distributeurs officiels.</p></div>
+        <div class="why-item"><svg><use href="#i-ruler"/></svg><h3>La bonne pointure</h3><p>Un doute sur la taille ? On vous conseille sur WhatsApp et l'échange est offert sous 7 jours.</p></div>
+        <div class="why-item"><svg><use href="#i-bolt"/></svg><h3>Expédition rapide</h3><p>Commande confirmée par téléphone puis expédiée sous 24 h, livrée en 24 à 72 h.</p></div>
+        <div class="why-item"><svg><use href="#i-cash"/></svg><h3>Zéro risque</h3><p>Vous payez en espèces au livreur, après avoir vu vos chaussures.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Avis clients</span><h2 class="section-title" id="reviews-title">Ils jouent en XN-KODASSY</h2></div>
+        <div class="rating-summary" data-rating-summary hidden></div>
+      </div>
+      <div class="reviews-grid" data-reviews></div>
+    </div>
+  </section>
+
+  <section class="section section--dark" aria-labelledby="nl-title">
+    <div class="container newsletter reveal">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2 id="nl-title">Les drops avant tout le monde.</h2>
+        <p>Nouveautés, restocks et ventes privées. Un email par semaine, maximum.</p>
+      </div>
+      <form class="inline-form" data-newsletter novalidate>
+        <label class="sr-only" for="nl-email">Votre adresse email</label>
+        <input id="nl-email" name="email" type="email" placeholder="Votre adresse email" autocomplete="email" required>
+        <button class="btn btn--lg" type="submit">S'inscrire</button>
+        <p class="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+<!--@footer-->
+</body>
+</html>

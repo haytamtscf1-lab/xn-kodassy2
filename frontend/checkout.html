@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Finaliser ma commande | XN-KODASSY</title>
+  <meta name="description" content="Finalisez votre commande XN-KODASSY. Paiement à la livraison.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{siteUrl}}/commande">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XN-KODASSY">
+  <meta property="og:title" content="Finaliser ma commande | XN-KODASSY">
+  <meta property="og:description" content="Finalisez votre commande XN-KODASSY. Paiement à la livraison.">
+  <meta property="og:url" content="{{siteUrl}}/commande">
+  <meta property="og:image" content="{{siteUrl}}/images/og-cover.jpg">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/checkout.js"></script>
+</head>
+<body>
+<!--@header-->
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="/">Accueil</a></li><li><a href="/panier">Panier</a></li><li aria-current="page">Commande</li></ol>
+      <h1>Finaliser ma commande</h1>
+      <p>Paiement à la livraison · Aucune carte bancaire requise</p>
+    </div>
+  </section>
+  <div class="container checkout-layout" data-checkout-root>
+    <form data-checkout-form novalidate>
+      <div class="alert alert--error" data-form-error role="alert" hidden></div>
+      <fieldset class="fieldset">
+        <legend><span>1</span> Informations client</legend>
+        <div class="form-grid form-grid--2">
+          <div class="field span-2"><label for="c-name">Nom complet</label><input class="input" id="c-name" name="name" required minlength="3" maxlength="80" autocomplete="name"><p class="field-error" data-error-for="name"></p></div>
+          <div class="field"><label for="c-phone">Téléphone</label><input class="input" id="c-phone" name="phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78"><p class="field-error" data-error-for="phone"></p></div>
+          <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" required autocomplete="email" placeholder="vous@exemple.ma"><p class="field-error" data-error-for="email"></p></div>
+          <div class="field"><label for="c-city">Ville</label><input class="input" id="c-city" name="city" required maxlength="60" autocomplete="address-level2" list="cities"><datalist id="cities"><option>Casablanca</option><option>Rabat</option><option>Marrakech</option><option>Fès</option><option>Tanger</option><option>Agadir</option><option>Meknès</option><option>Oujda</option><option>Kénitra</option><option>Tétouan</option><option>Salé</option><option>El Jadida</option></datalist><p class="field-error" data-error-for="city"></p></div>
+          <div class="field"><label for="c-postal">Code postal <span class="opt">(facultatif)</span></label><input class="input" id="c-postal" name="postalCode" inputmode="numeric" maxlength="10" autocomplete="postal-code"><p class="field-error" data-error-for="postalCode"></p></div>
+          <div class="field span-2"><label for="c-address">Adresse</label><input class="input" id="c-address" name="address" required minlength="5" maxlength="200" autocomplete="street-address" placeholder="N°, rue, quartier"><p class="field-error" data-error-for="address"></p></div>
+          <div class="field span-2"><label for="c-comment">Commentaire <span class="opt">(facultatif)</span></label><textarea class="input" id="c-comment" name="comment" maxlength="500" placeholder="Étage, point de repère, horaire préféré…"></textarea></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="c-website">Ne pas remplir</label><input id="c-website" name="website" tabindex="-1" autocomplete="off"></div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <legend><span>2</span> Livraison</legend>
+        <label class="option-card"><input type="radio" name="delivery" value="home" checked><div><b>Livraison à domicile</b><span>24 à 72 h partout au Maroc · Paiement à la livraison</span></div><span class="price-tag" data-ship-label>—</span></label>
+      </fieldset>
+      <button class="btn btn--lg btn--block" type="submit" data-submit>Confirmer ma commande</button>
+      <p class="muted" style="font-size:13px;margin-top:12px">En confirmant, vous acceptez nos <a href="/conditions-generales">conditions générales de vente</a>. Vos données servent uniquement au traitement de la commande (<a href="/confidentialite">confidentialité</a>).</p>
+    </form>
+    <aside class="summary" data-checkout-summary aria-labelledby="sum-title"><div class="skel-line w-70 h-24"></div></aside>
+  </div>
+</main>
+<!--@footer-->
+</body>
+</html>

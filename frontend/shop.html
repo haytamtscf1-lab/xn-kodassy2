@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Boutique — Chaussures de football | XN-KODASSY</title>
+  <meta name="description" content="Toutes nos chaussures de football Adidas F50, Predator et Nike Phantom : filtrez par marque, pointure et prix.">
+  <link rel="canonical" href="{{siteUrl}}/boutique">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XN-KODASSY">
+  <meta property="og:title" content="Boutique — Chaussures de football | XN-KODASSY">
+  <meta property="og:description" content="Toutes nos chaussures de football Adidas F50, Predator et Nike Phantom : filtrez par marque, pointure et prix.">
+  <meta property="og:url" content="{{siteUrl}}/boutique">
+  <meta property="og:image" content="{{siteUrl}}/images/og-cover.jpg">
+  <meta property="og:locale" content="fr_MA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/images/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/shop.js"></script>
+</head>
+<body>
+<!--@header-->
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <ol class="breadcrumb"><li><a href="/">Accueil</a></li><li aria-current="page">Boutique</li></ol>
+      <h1><span data-shop-title>Boutique</span></h1>
+      <p>Les derniers crampons Adidas et Nike, disponibles maintenant.</p>
+    </div>
+  </section>
+  <div class="container shop">
+    <aside class="filters" id="filters" aria-label="Filtres">
+      <div class="filters__head">
+        <h2>Filtres</h2>
+        <button class="icon-btn" type="button" style="color:inherit" data-filters-close aria-label="Fermer les filtres"><svg class="icon"><use href="#i-close"/></svg></button>
+      </div>
+      <form class="filters__body" data-filters-form novalidate>
+        <div class="filter-group">
+          <h3>Recherche</h3>
+          <label class="sr-only" for="f-q">Nom, marque ou référence</label>
+          <input class="input" id="f-q" name="q" type="search" placeholder="Nom, marque, référence" maxlength="80">
+        </div>
+        <div class="filter-group">
+          <h3>Disponibilité</h3>
+          <label class="check"><input type="checkbox" name="promo" value="1"><span>En promotion</span></label>
+          <label class="check"><input type="checkbox" name="inStock" value="1"><span>En stock uniquement</span></label>
+        </div>
+        <div class="filter-group"><h3>Marque</h3><div data-filter-brands><div class="skel-line w-70"></div></div></div>
+        <div class="filter-group"><h3>Catégorie</h3><div data-filter-categories><div class="skel-line w-70"></div></div></div>
+        <div class="filter-group">
+          <h3>Prix (DH)</h3>
+          <div class="price-inputs">
+            <label>Min<input class="input" name="minPrice" type="number" inputmode="numeric" min="0" step="50" placeholder="0"></label>
+            <label>Max<input class="input" name="maxPrice" type="number" inputmode="numeric" min="0" step="50" placeholder="—"></label>
+          </div>
+        </div>
+        <div class="filter-group"><h3>Pointure</h3><div class="size-filter" data-filter-sizes></div></div>
+      </form>
+      <div class="filters__foot">
+        <button class="btn btn--ghost" type="button" data-filters-reset>Effacer</button>
+        <button class="btn" type="button" data-filters-close>Voir <span data-count-inline></span></button>
+      </div>
+    </aside>
+
+    <section aria-label="Produits">
+      <div class="shop-toolbar">
+        <p class="shop-toolbar__count" data-count role="status">Chargement…</p>
+        <div class="shop-toolbar__right">
+          <button class="btn btn--ghost btn--sm filters-toggle" type="button" data-filters-open aria-controls="filters"><svg class="icon"><use href="#i-filter"/></svg> Filtres</button>
+          <label class="sr-only" for="sort">Trier par</label>
+          <select class="select" id="sort" data-sort>
+            <option value="newest">Nouveautés</option>
+            <option value="popular">Popularité</option>
+            <option value="price_asc">Prix croissant</option>
+            <option value="price_desc">Prix décroissant</option>
+            <option value="discount">Meilleures réductions</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filters" data-active-filters></div>
+      <div class="product-grid" data-grid aria-live="polite" aria-busy="true"></div>
+      <nav class="pagination" data-pagination aria-label="Pagination"></nav>
+    </section>
+  </div>
+  <div class="drawer-backdrop" data-filters-backdrop></div>
+</main>
+<!--@footer-->
+</body>
+</html>

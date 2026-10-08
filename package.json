@@ -1,0 +1,39 @@
+{
+  "name": "xn-kodassy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "XN-KODASSY — boutique en ligne de chaussures de football (Node.js, Express, MongoDB).",
+  "main": "backend/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch-path=backend --env-file-if-exists=.env backend/server.js",
+    "dev:memory": "node backend/dev-memory.js",
+    "seed": "node backend/seed/seed.js",
+    "create-admin": "node backend/seed/create-admin.js",
+    "test": "node --test --test-concurrency=1 \"backend/tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.5",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "sharp": "^0.35.5",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "supertest": "^7.3.1"
+  }
+}
